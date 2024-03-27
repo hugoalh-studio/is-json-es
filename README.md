@@ -122,16 +122,16 @@ A TypeScript module to determine whether the item is a JSON.
   type JSONObject = { [key: string]: JSONValue; };
   ```
 - ```ts
-  type JSONObjectExtend = { [key: string]: JSONValueExtend | undefined; };
+  type JSONObjectExtend = { [key: string]: JSONValueExtend; };
   ```
 - ```ts
-  type JSONPrimitive = boolean | null | number | string;
+  type JSONPrimitive = boolean | number | string | null;
   ```
 - ```ts
   type JSONValue = JSONArray | JSONObject | JSONPrimitive;
   ```
 - ```ts
-  type JSONValueExtend = JSONArrayExtend | JSONObjectExtend | JSONPrimitive;
+  type JSONValueExtend = JSONArrayExtend | JSONObjectExtend | JSONPrimitive | undefined;
   ```
 
 > **ℹ️ Note**
