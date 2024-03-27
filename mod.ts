@@ -10,7 +10,7 @@ export type JSONObject = { [key: string]: JSONValue; };
 /**
  * Type of the JSON primitive.
  */
-export type JSONPrimitive = boolean | null | number | string;
+export type JSONPrimitive = boolean | number | string | null;
 /**
  * Type of the JSON value.
  */
