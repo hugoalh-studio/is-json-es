@@ -1,32 +1,32 @@
-import { isObjectPlain } from "https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-ts/v1.0.0/mod.ts";
+import { isObjectPlain } from "https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-ts/v1.0.1/mod.ts";
 /**
- * Type of JSON primitive.
- */
-export type JSONPrimitive = boolean | null | number | string;
-/**
- * Type of JSON array.
+ * Type of the JSON array.
  */
 export type JSONArray = JSONValue[];
 /**
- * Type of JSON object.
+ * Type of the JSON object.
  */
 export type JSONObject = { [key: string]: JSONValue; };
 /**
- * Type of JSON value.
+ * Type of the JSON primitive.
+ */
+export type JSONPrimitive = boolean | null | number | string;
+/**
+ * Type of the JSON value.
  */
 export type JSONValue = JSONArray | JSONObject | JSONPrimitive;
 /**
- * Type of JSON array (extend).
+ * Type of the JSON array (extend).
  */
 export type JSONArrayExtend = JSONValueExtend[] | readonly JSONValueExtend[];
 /**
- * Type of JSON object (extend).
+ * Type of the JSON object (extend).
  */
-export type JSONObjectExtend = { [key: string]: JSONValueExtend | undefined; };
+export type JSONObjectExtend = { [key: string]: JSONValueExtend; };
 /**
- * Type of JSON value (extend).
+ * Type of the JSON value (extend).
  */
-export type JSONValueExtend = JSONArrayExtend | JSONObjectExtend | JSONPrimitive;
+export type JSONValueExtend = JSONArrayExtend | JSONObjectExtend | JSONPrimitive | undefined;
 /**
  * Determine whether the item is a JSON.
  * @param {unknown} item Item that need to determine.
