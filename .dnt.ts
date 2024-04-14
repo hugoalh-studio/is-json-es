@@ -7,7 +7,9 @@ import { walk as readDir, type WalkEntry } from "STD/fs/walk.ts";
 const pathsMain: WalkEntry[] = await Array.fromAsync(readDir("."));
 const transformResult: TransformOutput = await transform({
 	entryPoints: ["mod.ts"],
-	mappings: {},
+	mappings: {
+		"https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-es/v1.0.2/mod.ts": { name: "@hugoalh/is-object-plain" }
+	},
 	shims: [],
 	target: "Latest"
 });
