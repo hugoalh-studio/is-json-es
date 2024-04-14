@@ -1,4 +1,4 @@
-import { isObjectPlain } from "https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-ts/v1.0.1/mod.ts";
+import { isObjectPlain } from "https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-es/v1.0.2/mod.ts";
 /**
  * Type of the JSON array.
  */

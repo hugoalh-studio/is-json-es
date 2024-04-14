@@ -1,12 +1,12 @@
 // This file is only for JSR related, non-JSR related must set in the file `deno.jsonc`!
 {
 	"name": "@hugoalh/is-json",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"exports": {
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-ts/v1.0.1/mod.ts": "jsr:@hugoalh/is-object-plain@1.0.1"
+		"https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-es/v1.0.2/mod.ts": "jsr:@hugoalh/is-object-plain@1.0.2"
 	},
 	"publish": {
 		"exclude": [
