@@ -8,127 +8,43 @@
 
 An ES (JavaScript & TypeScript) module to determine whether the item is a JSON.
 
-## 🎯 Target
+## 🔰 Begin
 
-- Bun >= v1.1.0
-- Cloudflare Workers
-- Deno >= v1.42.0
-  > **🛡️ Require Permission**
-  >
-  > *N/A*
-- NodeJS >= v16.13.0
+### 🎯 Targets
 
-## 🔰 Usage
+|  | **Registry - JSR** | **Registry - NPM** | **Remote Import** |
+|:--|:--|:--|:--|
+| **[Bun](https://bun.sh/)** >= v1.1.0 | [✔️ `node_modules`](https://jsr.io/docs/npm-compatibility) | [✔️ Specifier `npm:`](https://bun.sh/docs/runtime/autoimport) | ❌ |
+| **[Cloudflare Workers](https://workers.cloudflare.com/)** | [✔️ `node_modules`](https://jsr.io/docs/with/cloudflare-workers) | [✔️ `node_modules`](https://docs.npmjs.com/using-npm-packages-in-your-projects) | ❌ |
+| **[Deno](https://deno.land/)** >= v1.42.0 | [✔️ Specifier `jsr:`](https://jsr.io/docs/with/deno) | [✔️ Specifier `npm:`](https://docs.deno.com/runtime/manual/node/npm_specifiers) | [✔️](https://docs.deno.com/runtime/manual/basics/modules/#remote-import) |
+| **[NodeJS](https://nodejs.org/)** >= v16.13.0 | [✔️ `node_modules`](https://jsr.io/docs/with/node) | [✔️ `node_modules`](https://docs.npmjs.com/using-npm-packages-in-your-projects) | ❌ |
 
-### Via JSR With `node_modules`
-
-> **🎯 Supported Target**
+> **ℹ️ Note**
 >
-> - Bun
-> - Cloudflare Workers
-> - NodeJS
+> It is possible to use this module in other methods/ways which not listed in here, however it is not officially supported.
 
-1. Install via:
-    - Bun
-      ```sh
-      bunx jsr add @hugoalh/is-json[@${Tag}]
-      ```
-    - NPM
-      ```sh
-      npx jsr add @hugoalh/is-json[@${Tag}]
-      ```
-    - PNPM
-      ```sh
-      pnpm dlx jsr add @hugoalh/is-json[@${Tag}]
-      ```
-    - Yarn
-      ```sh
-      yarn dlx jsr add @hugoalh/is-json[@${Tag}]
-      ```
-2. Import at the script:
-    ```ts
-    import ... from "@hugoalh/is-json";
-    ```
+### #️⃣ Registries Identifier
+
+- **JSR:**
+  ```
+  @hugoalh/is-json
+  ```
+- **NPM:**
+  ```
+  @hugoalh/is-json
+  ```
 
 > **ℹ️ Note**
 >
 > - Although it is recommended to import the entire module, it is also able to import part of the module with sub path if available, please visit [file `jsr.jsonc`](./jsr.jsonc) property `exports` for available sub paths.
-> - It is recommended to import the module with tag for immutability.
+> - It is recommended to use this module with tag for immutability.
 
-### Via JSR With Specifier
+### #️⃣ Remote Import Paths
 
-> **🎯 Supported Target**
->
-> - Deno
-
-1. Import at the script:
-    ```ts
-    import ... from "jsr:@hugoalh/is-json[@${Tag}]";
-    ```
-
-> **ℹ️ Note**
->
-> - Although it is recommended to import the entire module, it is also able to import part of the module with sub path if available, please visit [file `jsr.jsonc`](./jsr.jsonc) property `exports` for available sub paths.
-> - It is recommended to import the module with tag for immutability.
-
-### Via NPM With `node_modules`
-
-> **🎯 Supported Target**
->
-> - Cloudflare Workers
-> - NodeJS
-
-1. Install via:
-    - NPM
-      ```sh
-      npm install @hugoalh/is-json[@${Tag}]
-      ```
-    - PNPM
-      ```sh
-      pnpm add @hugoalh/is-json[@${Tag}]
-      ```
-    - Yarn
-      ```sh
-      yarn add @hugoalh/is-json[@${Tag}]
-      ```
-2. Import at the script:
-    ```ts
-    import ... from "@hugoalh/is-json";
-    ```
-
-> **ℹ️ Note**
->
-> - Although it is recommended to import the entire module, it is also able to import part of the module with sub path if available, please visit [file `jsr.jsonc`](./jsr.jsonc) property `exports` for available sub paths.
-> - It is recommended to import the module with tag for immutability.
-
-### Via NPM With Specifier
-
-> **🎯 Supported Target**
->
-> - Bun
-> - Deno
-
-1. Import at the script:
-    ```ts
-    import ... from "npm:@hugoalh/is-json[@${Tag}]";
-    ```
-
-> **ℹ️ Note**
->
-> - Although it is recommended to import the entire module, it is also able to import part of the module with sub path if available, please visit [file `jsr.jsonc`](./jsr.jsonc) property `exports` for available sub paths.
-> - It is recommended to import the module with tag for immutability.
-
-### Via Remote Import
-
-> **🎯 Supported Target**
->
-> - Deno
-
-1. Import at the script:
-    ```ts
-    /* Via GitHub Raw (Require Tag) */
-    import ... from "https://raw.githubusercontent.com/hugoalh-studio/is-json-es/${Tag}/mod.ts";
-    ```
+- **GitHub Raw:** (Require Tag)
+  ```
+  https://raw.githubusercontent.com/hugoalh-studio/is-json-es/${Tag}/mod.ts
+  ```
 
 > **ℹ️ Note**
 >
@@ -141,7 +57,11 @@ An ES (JavaScript & TypeScript) module to determine whether the item is a JSON.
 >   These elements are not considered part of the public API, thus no stability is guaranteed for them.
 > - Although there have 3rd party services which provide enhanced, equal, or similar methods/ways to remote import the module, beware these services maybe inject unrelated elements and thus affect the security.
 
-## 🧩 API
+### 🛡️ Permissions
+
+*This module does not require any permission.*
+
+## 🧩 APIs
 
 - ```ts
   function isJSON(item: unknown): item is JSONValue;
@@ -184,7 +104,7 @@ An ES (JavaScript & TypeScript) module to determine whether the item is a JSON.
 > - [Deno CLI `deno doc`](https://deno.land/manual/tools/documentation_generator)
 > - [JSR](https://jsr.io/@hugoalh/is-json)
 
-## ✍️ Example
+## ✍️ Examples
 
 - ```ts
   isJSON({

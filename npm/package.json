@@ -36,7 +36,7 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@hugoalh/is-object-plain": "1.0.2"
+		"@hugoalh/is-object-plain": "1.0.3"
 	},
 	"devDependencies": {
 		"typescript": "^5.4.5"
