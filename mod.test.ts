@@ -1,4 +1,4 @@
-import { assertEquals } from "STD/assert/assert-equals";
+import { assertEquals } from "STD/assert/equals";
 import { isJSON } from "./mod.ts";
 Deno.test("False 1", { permissions: "none" }, () => {
 	assertEquals(isJSON({
