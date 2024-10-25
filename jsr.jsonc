@@ -6,7 +6,7 @@
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-es/v1.0.4/mod.ts": "jsr:@hugoalh/is-object-plain@^1.0.4"
+		"https://raw.githubusercontent.com/hugoalh/is-object-plain-es/v1.0.5/mod.ts": "jsr:@hugoalh/is-object-plain@^1.0.5"
 	},
 	"publish": {
 		"exclude": [

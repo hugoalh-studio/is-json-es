@@ -11,9 +11,9 @@ await invokeDenoNodeJSTransformer({
 	entrypoints: configJSR.getExports(),
 	generateDeclarationMap: true,
 	mappings: {
-		"https://raw.githubusercontent.com/hugoalh-studio/is-object-plain-es/v1.0.4/mod.ts": {
+		"https://raw.githubusercontent.com/hugoalh/is-object-plain-es/v1.0.5/mod.ts": {
 			name: "@hugoalh/is-object-plain",
-			version: "^1.0.4"
+			version: "^1.0.5"
 		}
 	},
 	metadata: {
@@ -24,15 +24,15 @@ await invokeDenoNodeJSTransformer({
 			"is",
 			"json"
 		],
-		homepage: "https://github.com/hugoalh-studio/is-json-es#readme",
+		homepage: "https://github.com/hugoalh/is-json-es#readme",
 		bugs: {
-			url: "https://github.com/hugoalh-studio/is-json-es/issues"
+			url: "https://github.com/hugoalh/is-json-es/issues"
 		},
 		license: "MIT",
 		author: "hugoalh",
 		repository: {
 			type: "git",
-			url: "git+https://github.com/hugoalh-studio/is-json-es.git"
+			url: "git+https://github.com/hugoalh/is-json-es.git"
 		},
 		scripts: {
 		},
